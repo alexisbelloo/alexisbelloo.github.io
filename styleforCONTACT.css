@@ -1,0 +1,99 @@
+/* This is the CSS file for the Contant Me page */
+
+/*Background of entire page*/
+body{
+    background-image: url(nightsky2.jpeg);
+}
+
+/* Home Page button*/
+#homepage{
+    background: none;
+    border: none;
+    color:rgb(29, 223, 29);
+    font-size: 16px;
+    size: 30px;
+    height: 30px;
+    cursor: pointer;
+
+}
+
+/* Contact Me Heading */
+.contact {
+    color: rgb(29, 223, 29);
+    font-family: "Press Start 2P";
+    font-size: 15x;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    
+}
+/*LinkedIn button*/
+#linked {
+    background: none;
+    border: none;
+    color:rgb(29, 223, 29);
+    font-size: 16px;
+    size: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/*Email Button*/
+#email {
+    background: none;
+    border: none;
+    color:rgb(29, 223, 29);
+    font-size: 16px;
+    size: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.fa-house{
+    size: 100px;
+}
+
+/*Line under title*/
+.line{
+    color: rgb(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+    border-bottom-style: solid
+    margin: 50px
+}
+
+/*Title of page*/
+.title{
+    color: rgb(29, 223, 29);
+    font-family: "Press Start 2P";
+    text-align: center;
+}
+/* buttons for homepage*/
+#work {
+    font-family: "Press Start 2P";
+    font-size: 20px;
+    margin:50px;
+    cursor: pointer;
+}
+#aboutBut {
+    font-family: "Press Start 2P";
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#contact {
+    font-family: "Press Start 2P";
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#project {
+    font-family: "Press Start 2P";
+    font-size: 20px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+/*aligns buttons to be centered*/
+#buttons {
+    text-align: center;
+    font-size: 0px;
+}
