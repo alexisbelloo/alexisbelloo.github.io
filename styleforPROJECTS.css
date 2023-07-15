@@ -19,7 +19,11 @@ body{
 .fa-house{
     size: 100px;
 }
-
+/*Slot Machine Link*/
+#slots {
+    cursor: pointer;
+    color:rgb(29, 223, 29);
+}
 /*Projects Text*/
 .projects {
     color: rgb(29, 223, 29);
