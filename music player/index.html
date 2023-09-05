@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/57ff882feb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class = "container">
+        <div class = "player">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <img src="IMG_0222.jpg" class = "songCover">
+            <h1>Soon</h1>
+            <p>Alexis Bello</p>
+            <audio id = "song">
+                <source src = "soon.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="time">
+
+            <div class="controls">
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div onclick = "playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                <div><i class="fa-solid fa-forward"></i></div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let time = document.getElementById("time");
+        let song = document.getElementById("song");
+        let ctrlIcon = document.getElementById("ctrlIcon");
+
+        song.onloadedmetadata = function(){
+            time.max = song.duration;
+            time.value = song.currentTime;
+        }
+
+        function playPause() {
+            if (ctrlIcon.classList.contains("fa-pause")) {
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                ctrlIcon.classList.add("fa-play");
+            }
+            else {
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+            }
+        }
+
+        if (song.play()) {
+            setInterval(()=>{
+                time.value = song.currentTime;
+            }, 500);
+        }
+        time.onchange = function() {
+            song.play();
+            song.currentTime = time.value;
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+        }
+
+    </script>
+</body>
+</html>
